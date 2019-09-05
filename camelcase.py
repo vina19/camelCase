@@ -11,3 +11,6 @@ camelcase = joined[0].lower() + joined[1:]
 
 #Display the result
 print(camelcase)
+
+def display_banner():
+    print('Awesome camelCase program')
