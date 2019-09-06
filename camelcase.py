@@ -1,16 +1,23 @@
-#inputing the sentence from the user
-sentence = input("Please enter a sentence: ")
+#Convert sentence to camelCase
+def camelcase(sentence):
+    title_case = sentence.title()
+    upper_camel_case = title.case.replace(' ', '')
+    return upper_camel_case[0:1].lower() + upper_camel_case[1:]
 
-#convert the first letter to uppercase from the sentence
-upper_words = sentence.title()
-
-#not adding space in the result sentence
-no_spaces = upper_words.replace(' ', '')
-joined = ''.join(no_spaces)
-camelcase = joined[0].lower() + joined[1:]
-
-#Display the result
-print(camelcase)
-
+#displaying the banner
 def display_banner():
-    print('Awesome camelCase program')
+    msg = 'Awesome camelCaseGenerator program'
+    instructions = 'Start with entering a sentence to convert to camelCase')
+    stars = '*' * len(msg)
+    print(f'\n {stars} \n {msg} \n {stars}\n')
+
+def main():
+    display_banner()
+    
+    #inputing the sentence from the user
+    sentence = input("Please enter a sentence: ")
+    output = camelcase(sentence)
+    print(output)
+
+if __name__ == '__main__':
+    main()
